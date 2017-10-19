@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  resources :posts
-  
   resources :advertisements
+  resources :posts
   
   get 'about' => 'welcome#about'
   
@@ -9,5 +8,5 @@ Rails.application.routes.draw do
   
   get 'welcome/contact'
 
-  root 'welcome#index'
+  root to: 'welcome#index'
 end
