@@ -14,7 +14,7 @@ RSpec.describe PostsController, type: :controller do
         it "assigns [my_post] to @posts" do
             get :index
             # #9
-            expect(assigns(:posts)).to eq([my_post])
+            expect(assigns(:post)).to eq([my_post])
         end
     end
 
