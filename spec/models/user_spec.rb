@@ -37,4 +37,13 @@ RSpec.describe User, type: :model do
         end
 
     end
+    
+    describe "name formatter" do
+        let(:user_with_test_name) {User.new(name: "vinny scotti")}
+        
+        it "should capitalize first letter of first and last name" do
+           expect(user_with_test_name.name).to eq "Vinny Scotti" 
+        end
+    end
+        
 end
