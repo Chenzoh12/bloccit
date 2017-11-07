@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+    include SessionsHelper
     def new
         @user = User.new
     end
@@ -15,6 +16,7 @@ class UsersController < ApplicationController
         if @user.save
             flash[:notice] = "Welcome to Bloccit #{@user.name}!"
             redirect_to root_path
+            create_session(@user)
         else
             flash.now[:alert] = "There was an error creating your account. Please try again."
             render :new
