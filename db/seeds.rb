@@ -9,7 +9,7 @@
   )
  end
  users = User.all
- 
+
  # Create Topics
  15.times do
    Topic.create!(
@@ -21,14 +21,12 @@
 
  # Create Posts
  50.times do
- # #1
-   Post.create!(
- # #2
-    user:   users.sample,
-    topic:  topics.sample,
-    title:  RandomData.random_sentence,
-    body:   RandomData.random_paragraph
-   )
+    Post.create!(
+        user:   users.sample,
+        topic:  topics.sample,
+        title:  RandomData.random_sentence,
+        body:   RandomData.random_paragraph
+    )
  end
  posts = Post.all
 
@@ -54,19 +52,27 @@
      body: RandomData.random_paragraph
    )
  end
- 
+
  admin = User.create!(
   name:     'Admin User',
   email:    'admin@example.com',
   password: 'helloworld',
   role:     'admin'
  )
- 
+
  # Create a member
  member = User.create!(
   name:     'Member User',
   email:    'member@example.com',
-  password: 'helloworld'
+  password: 'helloworld',
+  role:     'member'
+ )
+
+ moderator = User.create!(
+  name:     'Member User',
+  email:    'member@example.com',
+  password: 'helloworld',
+  role:     'moderator'
  )
 
  puts "Seed finished"
