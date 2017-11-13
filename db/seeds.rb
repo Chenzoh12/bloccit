@@ -43,15 +43,13 @@
  end
  sponsored_posts = SponsoredPost.all
 
- # Create Comments
- # #3
- 100.times do
-   Comment.create!(
- # #4
-     post: posts.sample,
-     body: RandomData.random_paragraph
-   )
- end
+100.times do
+    Comment.create!(
+        user: users.sample,
+        post: posts.sample,
+        body: RandomData.random_paragraph
+    )
+end
 
  admin = User.create!(
   name:     'Admin User',
@@ -70,7 +68,7 @@
 
  moderator = User.create!(
   name:     'Member User',
-  email:    'member@example.com',
+  email:    'moderator@example.com',
   password: 'helloworld',
   role:     'moderator'
  )
