@@ -53,6 +53,6 @@ end
 
 group :production do
     # Use pg as the production database for Active Record
-    #gem 'pg'
-    #gem 'rails_12factor'
+    gem 'pg'
+    gem 'rails_12factor'
 end
