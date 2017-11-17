@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+ <html>
+    <head>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    </head>
+
+    <body>
+        <h1>"<%= @post.title %>"</h1>
+        <h3> <%= link_to "View Post", topic_post_url(@post.topic, @post) %> </h3>
+    </body>
+ </html>
