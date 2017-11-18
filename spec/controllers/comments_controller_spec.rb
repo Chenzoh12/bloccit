@@ -1,6 +1,7 @@
 require 'rails_helper'
 include SessionsHelper
 
+
 RSpec.describe CommentsController, type: :controller do
     let(:my_topic) { create(:topic) }
     let(:my_user) { create(:user) }
