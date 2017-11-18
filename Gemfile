@@ -46,6 +46,7 @@ group :development, :test do
     gem 'shoulda'
     gem 'sqlite3'
     gem 'pry-rails'
+    gem 'factory_girl_rails', '~> 4.0'
 end
 
 =begin
